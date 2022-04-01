@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: static-dept
+  namespace: static1
+spec:
+  selector:
+    matchLabels:
+      app: static-dept
+  template:
+    metadata:
+      labels:
+        app: static-dept
+    spec:
+      containers:
+      - name: static-dept
+        image: 863398262027.dkr.ecr.ap-south-1.amazonaws.com/fruits:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
