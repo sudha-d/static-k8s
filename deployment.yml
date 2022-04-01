@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: static-dept
-        image: 863398262027.dkr.ecr.ap-south-1.amazonaws.com/fruits:latest
+        image: 863398262027.dkr.ecr.ap-south-1.amazonaws.com/fruits:number
         resources:
           limits:
             memory: "128Mi"
